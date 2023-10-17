@@ -1,0 +1,20 @@
+from sklearn.datasets import load_wine
+
+data = load_wine()
+
+X = data.data
+y= data.target
+
+print(X.shape)
+
+print(y.shape)
+
+from sklearn.neighbors import KNeighborsClassifier
+
+knn = KNeighborsClassifier(n_neighbors=1)
+
+print(knn)
+
+knn.fit(X, y)
+
+knn.predict([[13.62,4.95,2.35,20,92,2,.8,.47,1.02,4.4,.91,2.05,550]])
